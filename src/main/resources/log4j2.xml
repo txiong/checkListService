@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+       <properties>
+             <property name="pattern">%d{dd MMM yy HH:mm:ss.SSS} %-5level - %c{1.}:%L %M - %msg%xEx%n</property>
+       </properties>
+       <appenders>
+             <Console name="Console" target="SYSTEM_OUT">
+                    <PatternLayout pattern="${pattern}" />
+             </Console>   
+       </appenders>
+       <loggers>
+             <root level="info"> <!-- We log everything -->
+                    <appender-ref ref="Console" /> <!-- To console -->
+             </root>
+       </loggers>
+</Configuration>
